@@ -1,0 +1,15 @@
+CCIndex merged with HBase 0.90.0
+
+CCIndex is short for Complemental Clustering Index which used to support Multi-Dimensional Range Query on Non-primary key attributes in HBase.
+
+Codes of CCIndex  are in the following two packages :
+	org.apache.hadoop.hbase.client.ccindex
+	org.apache.hadoop.hbase.regionserver.ccindex
+There is a test case of CCIndex :
+	org.apache.hadoop.hbase.CCIndexTestCase.java
+The class named "MultiDimensionRangeQueryTest" is used to perform Multi-Dimensional Range Query.
+Users can use sequentialWrite to create a CCIndex with three indexes and use clusterScan to perform Queries.
+further information please refer to the documents in doc file.
+Current status:
+ Add a log system to ensure the data consistency.
+ Reconstruct CCIndex based on the coprocessor framework.
