@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/asf/!svn/ver/1040249/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc
+END
+ServerNotRunningException.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/ServerNotRunningException.java
+END
+HBaseRPCStatistics.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/HBaseRPCStatistics.java
+END
+HMasterInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1040249/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/HMasterInterface.java
+END
+HBaseRPCErrorHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/HBaseRPCErrorHandler.java
+END
+HRegionInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/HRegionInterface.java
+END
+HBaseRPC.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/HBaseRPC.java
+END
+HBaseServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/HBaseServer.java
+END
+HMasterRegionInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/HMasterRegionInterface.java
+END
+ByteBufferOutputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/ByteBufferOutputStream.java
+END
+HBaseRpcMetrics.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/HBaseRpcMetrics.java
+END
+HBaseRPCProtocolVersion.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/HBaseRPCProtocolVersion.java
+END
+HBaseClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1038376/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/ipc/HBaseClient.java
+END

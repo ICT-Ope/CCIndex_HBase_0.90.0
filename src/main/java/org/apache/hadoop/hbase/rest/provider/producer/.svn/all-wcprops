@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/provider/producer
+END
+ProtobufMessageBodyProducer.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/provider/producer/ProtobufMessageBodyProducer.java
+END
+PlainTextMessageBodyProducer.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/provider/producer/PlainTextMessageBodyProducer.java
+END

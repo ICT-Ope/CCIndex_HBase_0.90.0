@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/asf/!svn/ver/1039493/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest
+END
+ResourceConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/ResourceConfig.java
+END
+RootResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/RootResource.java
+END
+SchemaResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/SchemaResource.java
+END
+Constants.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/Constants.java
+END
+ProtobufMessageHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/ProtobufMessageHandler.java
+END
+RegionsResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/RegionsResource.java
+END
+ScannerResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/ScannerResource.java
+END
+ExistsResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/ExistsResource.java
+END
+RowResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/RowResource.java
+END
+StorageClusterVersionResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/StorageClusterVersionResource.java
+END
+VersionResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/VersionResource.java
+END
+ScannerInstanceResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/ScannerInstanceResource.java
+END
+ResourceBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/ResourceBase.java
+END
+StorageClusterStatusResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/StorageClusterStatusResource.java
+END
+TableResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/TableResource.java
+END
+RowResultGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/RowResultGenerator.java
+END
+Main.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/asf/!svn/ver/1039493/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/Main.java
+END
+ScannerResultGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/ScannerResultGenerator.java
+END
+ResultGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/ResultGenerator.java
+END
+RowSpec.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/RowSpec.java
+END
+RESTServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/RESTServlet.java
+END

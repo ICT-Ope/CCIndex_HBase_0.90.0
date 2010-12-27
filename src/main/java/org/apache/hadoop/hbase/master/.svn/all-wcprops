@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/asf/!svn/ver/1050761/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master
+END
+MasterServices.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/MasterServices.java
+END
+AssignmentManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1049756/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/AssignmentManager.java
+END
+BulkAssigner.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/BulkAssigner.java
+END
+MasterFileSystem.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1050543/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/MasterFileSystem.java
+END
+CatalogJanitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1050761/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/CatalogJanitor.java
+END
+LoadBalancer.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1042913/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/LoadBalancer.java
+END
+ServerManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1042283/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/ServerManager.java
+END
+HMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1049681/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/HMaster.java
+END
+LogCleanerDelegate.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/LogCleanerDelegate.java
+END
+DeadServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1040288/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/DeadServer.java
+END
+TimeToLiveLogCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/TimeToLiveLogCleaner.java
+END
+HMasterCommandLine.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1049251/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/HMasterCommandLine.java
+END
+ActiveMasterManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1042283/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/ActiveMasterManager.java
+END
+LogCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1049681/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/master/LogCleaner.java
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/asf/!svn/ver/1041697/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/catalog
+END
+CatalogTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1041697/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/catalog/CatalogTracker.java
+END
+MetaReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1041535/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/catalog/MetaReader.java
+END
+RootLocationEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1034572/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/catalog/RootLocationEditor.java
+END
+MetaEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1041168/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/catalog/MetaEditor.java
+END

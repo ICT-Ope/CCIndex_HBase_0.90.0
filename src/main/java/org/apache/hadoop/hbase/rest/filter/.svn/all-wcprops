@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/asf/!svn/ver/1039493/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/filter
+END
+GZIPRequestWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1039493/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/filter/GZIPRequestWrapper.java
+END
+GZIPResponseStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1039493/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/filter/GZIPResponseStream.java
+END
+GZIPResponseWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1039493/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/filter/GZIPResponseWrapper.java
+END
+GZIPRequestStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1039493/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/filter/GZIPRequestStream.java
+END
+GzipFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1039493/hbase/branches/0.90/src/main/java/org/apache/hadoop/hbase/rest/filter/GzipFilter.java
+END
