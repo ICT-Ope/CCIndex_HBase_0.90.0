@@ -42,8 +42,9 @@ public class CCIndexConstants {
 	final static byte[] CCIT_KEY = Bytes.toBytes("CCIT");
 	final static byte[] ORGTABLE_COLUMN_DELIMITER = Bytes.toBytes(";");
 	public static final byte[] BASE_KEY = Bytes.toBytes("BASE");
-	public static final byte[] EMPYT_ROW = Bytes.add(maxRowKey, Bytes
+	public static final byte[] EMPYT_VALUE = Bytes.add(maxRowKey, Bytes
 			.toBytes("EMPTY"));
 	public static final byte[] indexID_Base = Bytes.toBytes("indexed-org");
+	public static final String CheckNumNode="checknumber";
 
 }

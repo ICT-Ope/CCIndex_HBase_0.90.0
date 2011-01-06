@@ -20,25 +20,22 @@
 package org.apache.hadoop.hbase.regionserver.ccindex;
 
 import java.util.concurrent.ConcurrentHashMap;
-
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.client.ccindex.CCIndexDescriptor;
 import org.apache.hadoop.hbase.client.ccindex.IndexSpecification;
-
 import org.apache.hadoop.hbase.regionserver.HRegionServer;
 
-
+/**
+ * monitoring checkers which
+ * check one CCIT to find if there are some data losts.
+ */
 
 public class CheckerMaster extends Thread {
 	long sleeptime = 260000;
 	ConcurrentHashMap<String, CCIndexDescriptor> indexTableDescriptorMap;
 	private final Configuration conf;
-	int flag = 0;
 	HRegionServer server;
-
 	public CheckerMaster(
-
 			Configuration conf,
 			ConcurrentHashMap<String, CCIndexDescriptor> indexTableDescriptorMap,
 			HRegionServer server) {
@@ -88,7 +85,6 @@ public class CheckerMaster extends Thread {
 
 				if (freeN > size / 2)
 					for (String key : this.indexTableDescriptorMap.keySet()) {
-
 						CCIndexDescriptor des = this.indexTableDescriptorMap
 								.get(key);
 						this.checkTable(des);

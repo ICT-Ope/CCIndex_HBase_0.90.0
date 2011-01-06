@@ -8,7 +8,7 @@ Codes of CCIndex  are in the following two packages :
 There is a test case of CCIndex :
 	org.apache.hadoop.hbase.CCIndexTestCase.java
 The class named "MultiDimensionRangeQueryTest" is used to perform Multi-Dimensional Range Query.
-Users can use sequentialWrite to create a CCIndex with three indexes and use clusterScan to perform Queries.
+Users can use "sequentialWrite" to create a CCIndex with three indexes and use "clusterScan" to perform Queries.
 Further information please refer to the documents in doc file.
 Current status:
  Add a log system to ensure the data consistency.

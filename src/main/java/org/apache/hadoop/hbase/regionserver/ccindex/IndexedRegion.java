@@ -279,7 +279,7 @@ public class IndexedRegion extends HRegion {
 		}
 		for (IndexSpecification index : getIndexes()) {
 			if (oldColumnValues.get(index.getIndexedColumn()) == null)
-				oldColumnValues.put(index.getIndexedColumn(), CCIndexConstants.EMPYT_ROW);
+				oldColumnValues.put(index.getIndexedColumn(), CCIndexConstants.EMPYT_VALUE);
 		}
 		
 		for (IndexSpecification index : getIndexes()) {

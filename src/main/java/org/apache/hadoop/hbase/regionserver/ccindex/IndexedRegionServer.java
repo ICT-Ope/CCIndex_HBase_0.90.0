@@ -58,8 +58,11 @@ import org.apache.hadoop.hbase.regionserver.HRegion;
 import org.apache.hadoop.hbase.regionserver.HRegionServer;
 import org.apache.hadoop.hbase.regionserver.wal.HLog;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.apache.hadoop.hbase.zookeeper.ZKUtil;
+import org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher;
 import org.apache.hadoop.util.Progressable;
 import org.apache.hadoop.util.hash.Hash;
+import org.apache.zookeeper.KeeperException;
 
 /**
  * RegionServer which maintains secondary indexes.
@@ -75,6 +78,7 @@ public class IndexedRegionServer extends HRegionServer {
 	private static int idleWorker = 0;
 	public static int jobQueue = 8;
 	public static int sequence = 0;
+	public static  int checkMasterN=4;
 	public static ConcurrentHashMap<IndexSpecification, HTable> indexSpecToTables[];
 	public static ConcurrentHashMap<IndexSpecification, HTable> indexSpecToCCTS[];
 	public static ConcurrentHashMap<String, HTable> tableToCCTS;
@@ -87,7 +91,39 @@ public class IndexedRegionServer extends HRegionServer {
 //some code in HStoreFile to manage the replica number.
 	public static final boolean startCheckAdnRecovery=false;
 	public static final boolean flushRegions=false;
-	public class RegionFlusher extends Thread {
+	
+	
+	public boolean shouldAddCheckerMaster()
+	{
+		
+		ZooKeeperWatcher zk=super.getZooKeeper();
+		String numberN=ZKUtil.joinZNode(zk.baseZNode,CCIndexConstants.CheckNumNode);
+		try {
+			if(ZKUtil.checkExists(zk,numberN)!=-1)
+			{
+				ZKUtil.createSetData(zk, numberN, Bytes.toBytes(1));
+			}
+			else
+			{
+				int num=Bytes.toInt(ZKUtil.getData(zk, numberN));
+				if(num<this.checkMasterN)
+				{
+					ZKUtil.setData(zk, numberN, Bytes.toBytes(num+1));
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		} catch (KeeperException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return false;
+	}
+	private class RegionFlusher extends Thread {
 		HRegionServer server;
 		int sleepN = 150;
 
@@ -179,11 +215,11 @@ public class IndexedRegionServer extends HRegionServer {
 			indexSpecToTables[i] = new ConcurrentHashMap<IndexSpecification, HTable>();
 			indexSpecToCCTS[i] = new ConcurrentHashMap<IndexSpecification, HTable>();
 		}
-		if(startCheckAdnRecovery)
+		if(startCheckAdnRecovery&&this.shouldAddCheckerMaster())
 		{
-		CheckerMaster master = new CheckerMaster(conf,
+			CheckerMaster master = new CheckerMaster(conf,
 				this.indexTableDescriptorMap, this);
-		master.start();
+			master.start();
 		}
 		RegionFlusher flusher = new RegionFlusher(this);
 		flusher.start();

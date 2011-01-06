@@ -72,8 +72,6 @@ public class IndexMaintenanceUtils {
 		return put;
 	}
 
-
-
 	public static Put createCCITUpdate(final IndexSpecification indexSpec,
 			final byte[] row, final SortedMap<byte[], byte[]> columnValues) {
 		byte[] indexRow = indexSpec.getKeyGenerator().createIndexKey(row,
@@ -114,10 +112,11 @@ public class IndexMaintenanceUtils {
 				byte[][] colSeperated = KeyValue.parseColumn(col);
 				update.add(colSeperated[0], colSeperated[1], val);
 			}
-//			if (val != null&&!Bytes.equals(val, CCIndexConstants.EMPYT_ROW)) {
-//				byte[][] colSeperated = KeyValue.parseColumn(col);
-//				update.add(colSeperated[0], colSeperated[1], val);
-//			}
+			// if (val != null&&!Bytes.equals(val, CCIndexConstants.EMPYT_ROW))
+			// {
+			// byte[][] colSeperated = KeyValue.parseColumn(col);
+			// update.add(colSeperated[0], colSeperated[1], val);
+			// }
 		}
 		return update;
 	}
@@ -129,74 +128,71 @@ public class IndexMaintenanceUtils {
 		Put update = new Put(indexRow);
 		for (byte[] col : indexSpec.getIndexedColumns()) {
 			byte[] val = columnValues.get(col);
-			if (val != null&&!Bytes.equals(val, CCIndexConstants.EMPYT_ROW)) {
+			if (val != null && !Bytes.equals(val, CCIndexConstants.EMPYT_VALUE)) {
 				byte[][] colSeperated = KeyValue.parseColumn(col);
 				update.add(colSeperated[0], colSeperated[1], val);
 			}
 		}
 		return update;
 	}
-	public static Delete getBaseCCTDelete(Delete delete,CCIndexDescriptor desc)
-	{
-		byte[] row=delete.getRow();
-		if(delete.getFamilyMap().size()==0)
-		{
+
+	public static Delete getBaseCCTDelete(Delete delete, CCIndexDescriptor desc) {
+		byte[] row = delete.getRow();
+		if (delete.getFamilyMap().size() == 0) {
 			return new Delete(row);
 		}
-		Delete ret=new Delete(row);
-		Map<byte[],List<KeyValue>> familyMap=delete.getFamilyMap();
-		for(byte[] family:familyMap.keySet())
-		{
-			for(KeyValue kv:familyMap.get(family))
-			{
-				if(desc.getIndexedFamiliesSet().contains(kv.getFamily()))
-				{
-					ret.deleteColumns(kv.getFamily(), kv.getQualifier(), kv.getTimestamp());
+		Delete ret = new Delete(row);
+		Map<byte[], List<KeyValue>> familyMap = delete.getFamilyMap();
+		for (byte[] family : familyMap.keySet()) {
+			for (KeyValue kv : familyMap.get(family)) {
+				if (desc.getIndexedFamiliesSet().contains(kv.getFamily())) {
+					ret.deleteColumns(kv.getFamily(), kv.getQualifier(), kv
+							.getTimestamp());
 				}
 			}
 		}
 		return ret;
 	}
-	public static Delete getCCITDelete(Result oldValue,Delete delete,IndexSpecification spec)
-	{
-		
-		byte[] row=delete.getRow();
-		byte[] columnV=oldValue.getValue(spec.getFamily(), spec.getColumn())==null?
-				CCIndexConstants.EMPYT_ROW:oldValue.getValue(spec.getFamily(), spec.getColumn());
-		byte[] newRow=spec.getKeyGenerator().createIndexKey(row, columnV);
-		Delete ret=new Delete(newRow);
-		Map<byte[],List<KeyValue>> familyMap=delete.getFamilyMap();
-		for(byte[] family:familyMap.keySet())
-		{
-			for(KeyValue kv:familyMap.get(family))
-			{
-					ret.deleteColumns(kv.getFamily(), kv.getQualifier(), kv.getTimestamp());
+
+	public static Delete getCCITDelete(Result oldValue, Delete delete,
+			IndexSpecification spec) {
+
+		byte[] row = delete.getRow();
+		byte[] columnV = oldValue.getValue(spec.getFamily(), spec.getColumn()) == null ? CCIndexConstants.EMPYT_VALUE
+				: oldValue.getValue(spec.getFamily(), spec.getColumn());
+		byte[] newRow = spec.getKeyGenerator().createIndexKey(row, columnV);
+		Delete ret = new Delete(newRow);
+		Map<byte[], List<KeyValue>> familyMap = delete.getFamilyMap();
+		for (byte[] family : familyMap.keySet()) {
+			for (KeyValue kv : familyMap.get(family)) {
+				ret.deleteColumns(kv.getFamily(), kv.getQualifier(), kv
+						.getTimestamp());
 			}
 		}
 		return ret;
 	}
-	public static Delete getCCTDelete(Result oldValue,Delete delete,IndexSpecification spec)
-	{
-		byte[] row=delete.getRow();
-		byte[] columnV=oldValue.getValue(spec.getFamily(), spec.getColumn())==null?
-				CCIndexConstants.EMPYT_ROW:oldValue.getValue(spec.getFamily(), spec.getColumn());
-		byte[] newRow=spec.getKeyGenerator().createIndexKey(row, columnV);
-		Delete ret=new Delete(newRow);
-		Map<byte[],List<KeyValue>> familyMap=delete.getFamilyMap();
-		for(byte[] family:familyMap.keySet())
-		{
-			for(KeyValue kv:familyMap.get(family))
-			{
-				if(Bytes.equals(spec.getFamily(),kv.getFamily()))
-				{
-					
-					ret.deleteColumns(kv.getFamily(), kv.getQualifier(), kv.getTimestamp());
-				}
+
+	public static Delete getCCTDelete(Result oldValue, Delete delete,
+			IndexSpecification spec) {
+		byte[] row = delete.getRow();
+		byte[] columnV = oldValue.getValue(spec.getFamily(), spec.getColumn()) == null ? CCIndexConstants.EMPYT_VALUE
+				: oldValue.getValue(spec.getFamily(), spec.getColumn());
+		byte[] newRow = spec.getKeyGenerator().createIndexKey(row, columnV);
+		Delete ret = new Delete(newRow);
+		Map<byte[], List<KeyValue>> familyMap = delete.getFamilyMap();
+		for (byte[] family : familyMap.keySet()) {
+			for (KeyValue kv : familyMap.get(family)) {
+				// if(Bytes.equals(spec.getFamily(),kv.getFamily()))
+				// {
+				if (!spec.getAdditionalFamily().contains(kv.getFamily()))
+					ret.deleteColumns(kv.getFamily(), kv.getQualifier(), kv
+							.getTimestamp());
+				// }
 			}
 		}
 		return ret;
 	}
-	public static Put createOrgUpdate(final byte[] row,
+	public static Put recoverPutSimple(final byte[] row,
 			final SortedMap<byte[], byte[]> columnValues) {
 		byte[] indexRow = row;
 		Put update = null;
@@ -204,6 +200,38 @@ public class IndexMaintenanceUtils {
 		for (byte[] col : columnValues.keySet()) {
 			try {
 				byte[] val = columnValues.get(col);
+				byte[][] colSeperated = KeyValue.parseColumn(col);
+				update.add(colSeperated[0], colSeperated[1], val);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				continue;
+			}
+		}
+
+		return update;
+	}
+	public static Put recoverPut(final byte[] row,
+			final SortedMap<byte[], byte[]> columnValues,boolean isBase,CCIndexDescriptor des) {
+		byte[] indexRow = row;
+		Put update = null;
+		update = new Put(indexRow);
+		if(!isBase)
+		{
+			for(IndexSpecification spec:des.getIndexes())
+			{
+				if(columnValues.get(spec.getIndexedColumn())==null)
+				{
+					columnValues.put(spec.getIndexedColumn(), CCIndexConstants.EMPYT_VALUE);
+				}
+			}
+		}
+		
+		for (byte[] col : columnValues.keySet()) {
+			try {
+				byte[] val = columnValues.get(col);
+				if(isBase&&Bytes.compareTo(val, CCIndexConstants.EMPYT_VALUE)==0)
+					continue;
 				byte[][] colSeperated = KeyValue.parseColumn(col);
 				update.add(colSeperated[0], colSeperated[1], val);
 			} catch (Exception e) {

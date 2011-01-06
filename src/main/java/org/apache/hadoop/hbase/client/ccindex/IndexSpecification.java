@@ -22,6 +22,7 @@ package org.apache.hadoop.hbase.client.ccindex;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.KeyValue;
@@ -35,7 +36,7 @@ import org.apache.hadoop.io.WritableComparable;
 public class IndexSpecification implements Writable {
 
   // Columns that are indexed (part of the indexRowKey)
-
+	  private ArrayList<byte[]> additionalFamily =new ArrayList<byte[]>();
 	private byte[] family;
 	public byte[] getFamily() {
 		return family;
@@ -140,16 +141,29 @@ public void setCCIndex(CCIndexDescriptor cCIndex) {
     // For writable
   }
 
-  private void makeAllColumns() {
+  public ArrayList<byte[]> getAdditionalFamily() {
+	return additionalFamily;
+}
+
+public void setAdditionalFamily(ArrayList<byte[]> additionalFamily) {
+	this.additionalFamily = additionalFamily;
+}
+
+private void makeAllColumns() {
     this.allColumns = new byte[indexedColumns.length
         + (additionalColumns == null ? 0 : additionalColumns.length)][];
     System.arraycopy(indexedColumns, 0, allColumns, 0, indexedColumns.length);
     if (additionalColumns != null) {
       System.arraycopy(additionalColumns, 0, allColumns, indexedColumns.length,
           additionalColumns.length);
+      for(byte[] family:additionalColumns)
+      {
+    	  byte[][] fq=KeyValue.parseColumn(family);
+    	  	this.additionalFamily.add(fq[0]);
+      }
     }
   }
-  
+
   /**
    * Get the indexedColumns.
    * 
