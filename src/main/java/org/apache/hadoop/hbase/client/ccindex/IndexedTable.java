@@ -42,7 +42,9 @@ import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.filter.Filter;
 import org.apache.hadoop.hbase.util.Bytes;
 
-/** HTable extended with indexed support. */
+/** HTable extended with indexed support. 
+* @author liujia09@software.ict.ac.cn
+*/
 public class IndexedTable extends HTable {
 	static final Log LOG = LogFactory.getLog(IndexedTable.class);
 	private static SimpleOptimizer refiner;

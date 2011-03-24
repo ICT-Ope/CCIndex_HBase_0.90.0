@@ -66,7 +66,7 @@ import org.apache.zookeeper.KeeperException;
 
 /**
  * RegionServer which maintains secondary indexes.
- * 
+ * @author liujia09@software.ict.ac.cn 
  **/
 public class IndexedRegionServer extends HRegionServer {
 

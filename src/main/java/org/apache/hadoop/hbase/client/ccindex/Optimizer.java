@@ -18,6 +18,9 @@
  * limitations under the License.
  */
 package org.apache.hadoop.hbase.client.ccindex;
+/**
+* @author liujia09@software.ict.ac.cn
+*/
 
 public interface Optimizer {
 	/**

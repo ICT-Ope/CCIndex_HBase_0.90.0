@@ -28,6 +28,7 @@ import org.apache.hadoop.hbase.regionserver.HRegionServer;
 /**
  * monitoring checkers which
  * check one CCIT to find if there are some data losts.
+ * @author liujia09@software.ict.ac.cn
  */
 
 public class CheckerMaster extends Thread {

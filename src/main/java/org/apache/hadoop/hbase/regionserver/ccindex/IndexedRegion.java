@@ -61,6 +61,10 @@ import org.apache.hadoop.hbase.regionserver.wal.HLog;
 
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.Pair;
+/**
+Region for maintain CCIndex region put and delete
+* @author liujia09@software.ict.ac.cn
+*/
 
 public class IndexedRegion extends HRegion {
 

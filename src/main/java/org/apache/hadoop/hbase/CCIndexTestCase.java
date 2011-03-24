@@ -62,6 +62,8 @@ import org.apache.hadoop.hbase.util.FSUtils;
  * users can use sequentialWrite to create a CCIndex with three indexes and use
  * clusterScan to perform multi-dimensional range query.
  * </p>
+ * @author liujia
+ * @version 90.0
  */
 public class CCIndexTestCase {
 	private static final Log LOG = LogFactory.getLog(CCIndexTestCase.class
@@ -595,17 +597,9 @@ public class CCIndexTestCase {
 
 	byte[] getRandomRow(final Random random, final long totalRows) {
 
-		/**
-		 * wsc annotate the origial sentence to acquire totally different rand
-		 */
+	
 		return format(random.nextInt(Integer.MAX_VALUE) % totalRows);
 
-		/**
-		 * cancel unique value speciality
-		 * 
-		 * @author wsc
-		 * @date 2009-11-25
-		 */
 		/*
 		 * Long rand = null; while (RAND_LIST.contains(rand = new Long(random
 		 * .nextInt(Integer.MAX_VALUE) % (totalRows)))) ; RAND_LIST.add(rand);
@@ -617,18 +611,10 @@ public class CCIndexTestCase {
 	byte[] getRandomRow(final Random random, final long totalRows,
 			final long startRow) {
 
-		/**
-		 * wsc annotate the origial sentence to acquire totally different rand
-		 */
 		return format((random.nextInt(Integer.MAX_VALUE) % totalRows)
 				+ startRow);
 
-		/**
-		 * cancel unique value speciality
-		 * 
-		 * @author wsc
-		 * @date 2009-11-25
-		 */
+
 		/*
 		 * Long rand = null; while (RAND_LIST.contains(rand = new Long(random
 		 * .nextInt(Integer.MAX_VALUE) % (totalRows)))) ; RAND_LIST.add(rand);
@@ -639,12 +625,7 @@ public class CCIndexTestCase {
 
 	byte[] getRandomNumber(final Random random, final long totalRows) {
 
-		/**
-		 * cancel unique value speciality
-		 * 
-		 * @author wsc
-		 * @date 2009-11-25
-		 */
+
 		/*
 		 * Long rand = null; // two SETs while (RAND_NUMBER_LIST.contains(rand =
 		 * new Long(random .nextInt(Integer.MAX_VALUE) % (totalRows)))) ;
@@ -657,12 +638,6 @@ public class CCIndexTestCase {
 	byte[] getRandomNumber(final Random random, final long totalRows,
 			long startRows) {
 
-		/**
-		 * cancel unique value speciality
-		 * 
-		 * @author wsc
-		 * @date 2009-11-25
-		 */
 		/*
 		 * Long rand = null; // two SETs while (RAND_NUMBER_LIST.contains(rand =
 		 * new Long(random .nextInt(Integer.MAX_VALUE) % (totalRows)))) ;

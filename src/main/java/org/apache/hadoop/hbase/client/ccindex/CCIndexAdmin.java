@@ -47,6 +47,8 @@ import org.apache.hadoop.hbase.util.Bytes;
 /**
  * Extension of HBaseAdmin that creates,updates,adds and removes CCIndex.
  * 
+* @author liujia
+* @version 90.0
  */
 public class CCIndexAdmin extends HBaseAdmin {
 

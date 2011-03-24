@@ -16,6 +16,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *  liujia09@software.ict.ac.cn
  */
 package org.apache.hadoop.hbase.client.ccindex;
 
